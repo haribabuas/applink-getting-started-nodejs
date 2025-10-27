@@ -82,30 +82,23 @@ export default async function (fastify, _opts) {
         body: {
           type: 'object',
           properties: {
-            data: {
-              type: 'object',
-              properties: {
-                accountName: {
-                  type: 'string',
-                  minLength: 1,
-                },
-                lastName: {
-                  type: 'string',
-                  minLength: 1,
-                },
-                subject: {
-                  type: 'string',
-                  minLength: 1,
-                },
-                firstName: { type: 'string' },
-                description: { type: 'string' },
-                callbackUrl: { type: 'string' },
-              },
-              required: ['accountName', 'lastName', 'subject'],
-              additionalProperties: true,
+            accountName: {
+              type: 'string',
+              minLength: 1,
             },
+            lastName: {
+              type: 'string',
+              minLength: 1,
+            },
+            subject: {
+              type: 'string',
+              minLength: 1,
+            },
+            firstName: { type: 'string' },
+            description: { type: 'string' },
+            callbackUrl: { type: 'string' },
           },
-          required: ['data'],
+          required: ['accountName', 'lastName', 'subject'],
           additionalProperties: true,
         },
       },
