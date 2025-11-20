@@ -21,6 +21,8 @@ export default async function (fastify, _opts) {
       // If an org reference is set, query Accounts in that org
       const orgName = process.env.SALESFORCE_ORG_NAME;
       const appLinkAddon = request.sdk.addons.applink;
+      console.log('@@@orgName',orgName);
+      console.log('@@@appLinkAddon',appLinkAddon);
       logger.info(
         `Getting org '${orgName}' connection from Heroku AppLink add-on...`
       );
