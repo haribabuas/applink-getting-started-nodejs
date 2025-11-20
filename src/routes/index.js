@@ -25,7 +25,7 @@ export default async function (fastify, _opts) {
       logger.info(
         `Getting org '${orgName}' connection from Heroku AppLink add-on...`
       );
-      const anotherOrg = await appLinkAddon.getAuthorization(orgName,'HEROKU_APPLINK_OLIVE');
+      const anotherOrg = await appLinkAddon.getAuthorization(orgName,'OLIVE');
 
       logger.info(`Querying org '${orgName}' (${anotherOrg.id}) Accounts...`);
 
