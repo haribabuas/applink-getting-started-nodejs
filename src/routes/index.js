@@ -17,7 +17,7 @@ export default async function (fastify, _opts) {
 
     const query = 'SELECT Id, Name FROM Account';
 
-    if (process.env.SALESFORCE_ORG_NAME) {
+   /* if (process.env.SALESFORCE_ORG_NAME) {
       // If an org reference is set, query Accounts in that org
       const orgName = process.env.SALESFORCE_ORG_NAME;
       const appLinkAddon = request.sdk.addons.applink;
@@ -40,7 +40,7 @@ export default async function (fastify, _opts) {
       } catch (err) {
         logger.error(err.message);
       }
-    }
+    }*/
 
     // Query invoking org's Accounts
     const org = context.org;
