@@ -15,7 +15,7 @@ export default async function (fastify, _opts) {
 
     logger.info(`GET /accounts: ${JSON.stringify(event.data || {})}`);
 
-    const query = 'SELECT Id, Name FROM Account';
+    const query = 'SELECT Id, Name FROM Account limit 100;
 
    /* if (process.env.SALESFORCE_ORG_NAME) {
       // If an org reference is set, query Accounts in that org
